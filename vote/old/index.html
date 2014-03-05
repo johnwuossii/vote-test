@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>投票</title>
+<script type="text/javascript" src="../public/javascript/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#container div a").click(function() {
+        $(this).parent().animate({
+           width: '+=100px'
+        }, 500);
+
+        $(this).prev().html(parseInt($(this).prev().html()) + 1);
+        return false;
+    });
+});
+</script>
+<style type="text/css">
+    * {
+        font-family: Arial, "Free Sans";
+    }
+    #container {
+        margin-top: 20px;
+        color: #fff;
+    }
+    #container #question {
+        display: block;
+        padding: 20px;
+        font-weight: bold;
+        letter-spacing: -3px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 40px;
+    }
+    #container div {
+        font-weight: bold;
+        letter-spacing: -3px;
+        background: #0099cc;
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 34px;
+        color: #ffffff;
+        border-left: 20px solid #333;
+        width: 400px;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0 0.5em 0.5em 0;
+        border-radius: 0 1.5em 1.5em 0;
+    }
+    #container div a {
+        border-radius: 0.3em;
+        text-decoration: none;
+        color: #0099cc;
+        padding: 5px 15px;
+        background: #333;
+        margin: 0 20px;
+    }
+    #container div a:hover {
+        color: #fff;
+    }
+    #main {
+        background: #0099cc;
+        margin-top: 0;
+        padding: 2px 0 4px 0;
+        text-align: center;
+    }
+    #main a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    #main a:hover {
+        text-decoration: underline;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000 url('trentanove.gif') repeat right top;
+    }
+    #text {
+        margin: 0 auto;
+        width: 500px;
+        font-size: 12px;
+        color: #0099cc;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<h1>{{title}}</h1>
+<p>Welcome to the {{title}} demo. Click a link:</p>
+<ul>
+    <li><a href="/users">/users</a></li>
+  </ul>
+  <div id="container">
+      <span id="question">今天中午吃什麼</span>
+      <div><span>0</span><a href="">投票</a>吃自己</div>
+      <div><span>0</span><a href="">投票</a>吃大便</div>
+      <div><span>0</span><a href="">投票</a>吃鼻屎</div>
+      <div><span>0</span><a href="">投票</a>吃草</div>
+      <div><span>0</span><a href="">投票</a>阿不就好棒棒</div>
+      <div><span>0</span><a href="">投票</a>阿不就X棒棒</div>
+  </div>
+</body>
+</html>

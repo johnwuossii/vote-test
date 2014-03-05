@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<title>{{title}}</title>
+</head>
+<body>
+<form action="/new_vote" method="get">
+	<div>
+		<div>
+			<label>投票的名稱</label>
+		</div>
+
+		<div>
+			<input type="text">
+		</div>
+	</div>
+
+	<div>
+		<div>
+			<label>選項</label>
+		</div>
+	</div>
+
+	<div>
+		<div>
+			<input type="text">
+		</div>
+
+		<div>
+			<input type="text">
+		</div>
+	</div>
+
+	<div>
+		<div style="padding: 0;">
+			<div>
+				<label for="multiple"><input id="multiple"
+				type="checkbox" value="multi">多個答案</label>
+			</div>
+
+			<div>
+				<a class="small-12 button tiny" href="#" id=
+				"add-answer">增加新的選項</a>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div>
+			<button class="small-12 button large" id=
+			"create-poll" type="submit">建立投票</button>
+		</div>
+	</div>
+</form>
+</body>
